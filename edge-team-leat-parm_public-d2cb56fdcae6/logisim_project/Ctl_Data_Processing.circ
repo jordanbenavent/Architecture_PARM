@@ -215,9 +215,6 @@ end TCL_Generic;
       <circ-port height="10" pin="1100,230" width="10" x="265" y="75"/>
       <circ-port height="10" pin="1100,290" width="10" x="265" y="55"/>
       <circ-port height="10" pin="1400,440" width="10" x="265" y="135"/>
-      <circ-port height="8" pin="1180,350" width="8" x="56" y="166"/>
-      <circ-port height="8" pin="1180,450" width="8" x="56" y="196"/>
-      <circ-port height="8" pin="1180,510" width="8" x="56" y="206"/>
       <circ-port height="8" pin="220,250" width="8" x="46" y="56"/>
       <circ-port height="8" pin="490,430" width="8" x="46" y="76"/>
       <polyline fill="none" points="58,80 52,80" stroke="#000000" stroke-width="4"/>
@@ -274,13 +271,16 @@ end TCL_Generic;
       <a name="in_width" val="1"/>
       <a name="out_width" val="4"/>
     </comp>
-    <comp lib="0" loc="(1180,350)" name="Pin">
+    <comp lib="0" loc="(1160,350)" name="Constant">
+      <a name="value" val="0xe"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(1180,450)" name="Pin">
+    <comp lib="0" loc="(1160,450)" name="Constant">
+      <a name="value" val="0xf"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(1180,510)" name="Pin">
+    <comp lib="0" loc="(1160,510)" name="Constant">
+      <a name="value" val="0xc"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1400,440)" name="Pin">
@@ -380,9 +380,9 @@ end TCL_Generic;
     <wire from="(1120,330)" to="(1220,330)"/>
     <wire from="(1120,430)" to="(1220,430)"/>
     <wire from="(1120,490)" to="(1220,490)"/>
-    <wire from="(1180,350)" to="(1220,350)"/>
-    <wire from="(1180,450)" to="(1220,450)"/>
-    <wire from="(1180,510)" to="(1220,510)"/>
+    <wire from="(1160,350)" to="(1220,350)"/>
+    <wire from="(1160,450)" to="(1220,450)"/>
+    <wire from="(1160,510)" to="(1220,510)"/>
     <wire from="(1250,340)" to="(1350,340)"/>
     <wire from="(1250,440)" to="(1360,440)"/>
     <wire from="(1250,500)" to="(1350,500)"/>
