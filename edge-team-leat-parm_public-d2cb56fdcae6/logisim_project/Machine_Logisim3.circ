@@ -2154,7 +2154,7 @@ e7fe 981a 2800 d100 e7fe e7f9 e7fe e7fe
     <appear>
       <circ-anchor facing="east" height="6" width="6" x="247" y="57"/>
       <circ-port height="10" pin="1240,200" width="10" x="245" y="95"/>
-      <circ-port height="10" pin="530,450" width="10" x="245" y="105"/>
+      <circ-port height="10" pin="530,450" width="10" x="245" y="115"/>
       <circ-port height="10" pin="530,650" width="10" x="245" y="35"/>
       <circ-port height="10" pin="540,360" width="10" x="245" y="55"/>
       <circ-port height="10" pin="640,410" width="10" x="245" y="75"/>
@@ -2169,7 +2169,7 @@ e7fe 981a 2800 d100 e7fe e7f9 e7fe e7fe
       <circ-port height="10" pin="930,50" width="10" x="215" y="15"/>
       <circ-port height="8" pin="190,330" width="8" x="46" y="56"/>
       <circ-port height="8" pin="190,360" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="360,360" width="8" x="86" y="16"/>
+      <circ-port height="8" pin="360,360" width="8" x="46" y="116"/>
       <circ-port height="8" pin="490,160" width="8" x="46" y="96"/>
       <rect fill="none" height="150" stroke="#000000" stroke-width="2" width="180" x="60" y="20"/>
       <rect height="20" stroke="none" width="181" x="60" y="150"/>
