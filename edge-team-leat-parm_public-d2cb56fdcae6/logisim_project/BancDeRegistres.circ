@@ -166,7 +166,7 @@
     <a name="clabelup" val="east"/>
     <appear>
       <circ-anchor facing="east" height="6" width="6" x="397" y="77"/>
-      <circ-port height="10" pin="1170,130" width="10" x="405" y="115"/>
+      <circ-port height="10" pin="1170,170" width="10" x="405" y="115"/>
       <circ-port height="10" pin="810,1050" width="10" x="335" y="65"/>
       <circ-port height="10" pin="810,350" width="10" x="195" y="65"/>
       <circ-port height="10" pin="810,450" width="10" x="215" y="65"/>
@@ -175,13 +175,13 @@
       <circ-port height="10" pin="810,750" width="10" x="275" y="65"/>
       <circ-port height="10" pin="810,850" width="10" x="295" y="65"/>
       <circ-port height="10" pin="810,950" width="10" x="315" y="65"/>
-      <circ-port height="10" pin="960,130" width="10" x="405" y="135"/>
-      <circ-port height="8" pin="1080,150" width="8" x="316" y="156"/>
+      <circ-port height="10" pin="960,180" width="10" x="405" y="135"/>
+      <circ-port height="8" pin="1100,220" width="8" x="316" y="156"/>
       <circ-port height="8" pin="170,140" width="8" x="126" y="86"/>
       <circ-port height="8" pin="170,210" width="8" x="126" y="106"/>
       <circ-port height="8" pin="170,250" width="8" x="176" y="156"/>
       <circ-port height="8" pin="170,290" width="8" x="206" y="156"/>
-      <circ-port height="8" pin="870,150" width="8" x="276" y="156"/>
+      <circ-port height="8" pin="890,220" width="8" x="276" y="156"/>
       <path d="M184,159 Q180,149 177,159" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="89" stroke="#000000" stroke-width="2" width="279" x="130" y="71"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="159" y="95">DataIn</text>
@@ -202,11 +202,11 @@
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="386" y="124">BOut</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="386" y="144">AOut</text>
     </appear>
-    <comp lib="0" loc="(1080,150)" name="Pin">
+    <comp lib="0" loc="(1100,220)" name="Pin">
       <a name="label" val="RegB"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(1170,130)" name="Pin">
+    <comp lib="0" loc="(1170,170)" name="Pin">
       <a name="facing" val="south"/>
       <a name="label" val="BOut"/>
       <a name="output" val="true"/>
@@ -274,11 +274,11 @@
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(870,150)" name="Pin">
+    <comp lib="0" loc="(890,220)" name="Pin">
       <a name="label" val="RegA"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(960,130)" name="Pin">
+    <comp lib="0" loc="(960,180)" name="Pin">
       <a name="facing" val="south"/>
       <a name="label" val="AOut"/>
       <a name="output" val="true"/>
@@ -331,14 +331,12 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
-    <wire from="(1080,150)" to="(1100,150)"/>
-    <wire from="(1100,150)" to="(1100,220)"/>
     <wire from="(1100,220)" to="(1130,220)"/>
     <wire from="(1130,240)" to="(1130,280)"/>
     <wire from="(1140,240)" to="(1140,400)"/>
     <wire from="(1150,240)" to="(1150,500)"/>
     <wire from="(1160,240)" to="(1160,600)"/>
-    <wire from="(1170,130)" to="(1170,200)"/>
+    <wire from="(1170,170)" to="(1170,200)"/>
     <wire from="(1170,240)" to="(1170,700)"/>
     <wire from="(1180,240)" to="(1180,800)"/>
     <wire from="(1190,240)" to="(1190,900)"/>
@@ -465,8 +463,6 @@
     <wire from="(740,900)" to="(740,950)"/>
     <wire from="(740,900)" to="(980,900)"/>
     <wire from="(740,950)" to="(810,950)"/>
-    <wire from="(870,150)" to="(890,150)"/>
-    <wire from="(890,150)" to="(890,220)"/>
     <wire from="(890,220)" to="(920,220)"/>
     <wire from="(920,240)" to="(920,280)"/>
     <wire from="(920,280)" to="(1130,280)"/>
@@ -476,7 +472,7 @@
     <wire from="(940,500)" to="(1150,500)"/>
     <wire from="(950,240)" to="(950,600)"/>
     <wire from="(950,600)" to="(1160,600)"/>
-    <wire from="(960,130)" to="(960,200)"/>
+    <wire from="(960,180)" to="(960,200)"/>
     <wire from="(960,240)" to="(960,700)"/>
     <wire from="(960,700)" to="(1170,700)"/>
     <wire from="(970,240)" to="(970,800)"/>
