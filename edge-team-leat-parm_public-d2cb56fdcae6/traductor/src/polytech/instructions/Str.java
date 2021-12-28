@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class Str extends Instruction {
     public Str(String line) {
         super(line);
-        infos = Arrays.asList(9, 0);
+        infos = Arrays.asList(9);
     }
 
     @Override
@@ -15,7 +15,7 @@ public class Str extends Instruction {
                 .map(Integer::toHexString)
                 .collect(Collectors.joining())
                 + getRegister()
-                + Integer.toHexString(getNumber() / 4);
+                + (Integer.toHexString(getNumber() / 4).length() == 1 ? "0" + Integer.toHexString(getNumber() / 4) : Integer.toHexString(getNumber() / 4));
     }
 
     private int getRegister() {
