@@ -260,6 +260,14 @@
       <a name="facing" val="east"/>
       <a name="label" val="CMP"/>
     </comp>
+    <comp lib="0" loc="(1890,710)" name="Ground">
+      <a name="facing" val="west"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1890,910)" name="Ground">
+      <a name="facing" val="west"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(1910,1200)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="A"/>
@@ -495,7 +503,10 @@
     <comp lib="1" loc="(2240,1480)" name="OR Gate"/>
     <comp lib="1" loc="(2240,1630)" name="OR Gate"/>
     <comp lib="1" loc="(2240,1780)" name="OR Gate"/>
-    <comp lib="1" loc="(430,1080)" name="NOT Gate">
+    <comp lib="1" loc="(440,1040)" name="NOT Gate">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="1" loc="(450,1100)" name="NOT Gate">
       <a name="width" val="32"/>
     </comp>
     <comp lib="1" loc="(470,160)" name="XOR Gate">
@@ -747,6 +758,8 @@
     <wire from="(1880,1820)" to="(2100,1820)"/>
     <wire from="(1890,160)" to="(1890,340)"/>
     <wire from="(1890,340)" to="(2110,340)"/>
+    <wire from="(1890,710)" to="(1920,710)"/>
+    <wire from="(1890,910)" to="(1930,910)"/>
     <wire from="(1900,480)" to="(1900,500)"/>
     <wire from="(1900,500)" to="(1920,500)"/>
     <wire from="(1910,1200)" to="(1930,1200)"/>
@@ -918,7 +931,7 @@
     <wire from="(2390,1440)" to="(2390,1460)"/>
     <wire from="(2410,1360)" to="(2470,1360)"/>
     <wire from="(310,1040)" to="(310,1850)"/>
-    <wire from="(310,1040)" to="(470,1040)"/>
+    <wire from="(310,1040)" to="(410,1040)"/>
     <wire from="(310,150)" to="(310,460)"/>
     <wire from="(310,150)" to="(430,150)"/>
     <wire from="(310,40)" to="(310,80)"/>
@@ -936,8 +949,10 @@
     <wire from="(310,990)" to="(470,990)"/>
     <wire from="(380,1010)" to="(380,1080)"/>
     <wire from="(380,1010)" to="(470,1010)"/>
-    <wire from="(380,1080)" to="(380,1850)"/>
-    <wire from="(380,1080)" to="(400,1080)"/>
+    <wire from="(380,1080)" to="(380,1100)"/>
+    <wire from="(380,1080)" to="(470,1080)"/>
+    <wire from="(380,1100)" to="(380,1850)"/>
+    <wire from="(380,1100)" to="(420,1100)"/>
     <wire from="(380,120)" to="(380,170)"/>
     <wire from="(380,120)" to="(430,120)"/>
     <wire from="(380,170)" to="(380,210)"/>
@@ -968,9 +983,7 @@
     <wire from="(420,1330)" to="(730,1330)"/>
     <wire from="(420,1430)" to="(420,1740)"/>
     <wire from="(420,1430)" to="(730,1430)"/>
-    <wire from="(430,1080)" to="(450,1080)"/>
-    <wire from="(450,1080)" to="(450,1100)"/>
-    <wire from="(450,1080)" to="(470,1080)"/>
+    <wire from="(440,1040)" to="(470,1040)"/>
     <wire from="(450,1100)" to="(610,1100)"/>
     <wire from="(450,230)" to="(470,230)"/>
     <wire from="(450,300)" to="(470,300)"/>
