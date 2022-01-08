@@ -1,0 +1,28 @@
+# Unitary testing: test vectors for opcode decoder
+
+Stack_Pointer[32] Instruction[16] Enable[1] New_Stack_Pointer[32] Write_Enable[1]
+
+# and then you can list the test vectors. Values are separated by spaces
+
+# here I recall the list of the inputs and outputs :
+#                         inputs		   outputs 
+#       Stack_Pointer	               Instruction      Enable         New_Stack_Pointer              Write_Enable  
+
+# Lorsque enable vaut 0 rien ne change et write_enable est à 0             
+00000000000000000000000000000001    0000000000000000       0     00000000000000000000000000000000          0
+00000000000000000000000000000001    0000000010000000       0     00000000000000000000000000000000          0
+# Lorsque enable vaut 1 new stack pointer change (ici non car on additionne 0 à 0 et on soustrait 0 à 0) et write_enable est à 1
+00000000000000000000000000000000    0000000000000000       1     00000000000000000000000000000000          1
+00000000000000000000000000000000    0000000010000000       1     00000000000000000000000000000000          1
+# Lorsque enable vaut 1 new stack pointer change et write_enable est à 1
+00000000000000000000000000000001    0000000000000000       1     00000000000000000000000000000001          1
+00000000000000000000000000000001    0000000010000000       1     00000000000000000000000000000001          1
+# Tests sur une vértiable addition et une véritable soustracion (la soustraction donnera un résultat positif)
+00000000000000000000000000000010    0000000000000001       1     00000000000000000000000000000011          1
+00000000000000000000000000000010    0000000010000001       1     00000000000000000000000000000001          1
+# Tests sur une vértiable addition et une véritable soustracion (la soustraction donnera un résultat négatif) en complément à 2, 1-2 = 11111111111111111111111111111111
+00000000000000000000000000000010    0000000000000011       1     00000000000000000000000000000101          1
+00000000000000000000000000000001    0000000010000010       1     11111111111111111111111111111111          1
+
+# the test can then be run by hand from the GUI or in a shell: 
+# java -jar .\logisim-evolution.jar -testvector .\circuit_name .\test_vector_name.txt .\file_name.circ
