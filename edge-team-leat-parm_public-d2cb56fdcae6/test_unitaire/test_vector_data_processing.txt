@@ -1,0 +1,48 @@
+# Unitary testing: test vectors for sp_address
+
+Instruction[16] Enable[1] ALU_Opcode[4] Rd[3] Rn[3] Rm[3] Flags_Update_Mask[4]
+
+# and then you can list the test vectors. Values are separated by spaces
+
+# here I recall the list of the inputs and outputs :
+#   |             inputs        |                       outputs                 |
+#   |  Instruction      Enable  |  ALU_Opcode  Rd   Rn   Rm  Flags_Update_Mask  |
+# Lorsque enable vaut 0 aucun output ne change
+    0100000010000100       0          0000     000  000  000       0000      
+    0100000101010000       0          0000     000  000  000       0000  
+# Pour la suite enable vaudra 1
+# AND
+    0100000000010100       1          0000     100  100  010       1110
+# EOR
+    0100000001001010       1          0001     010  010  001       1110
+# LSL
+    0100000010001001       1          0010     001  001  001       1110
+# LSR
+    0100000011010010       1          0011     010  010  010       1110
+# ASR
+    0100000100100010       1          0100     010  010  100       1110
+# ADC
+    0100000101001001       1          0101     001  001  001       1111
+# SBC
+    0100000110100100       1          0110     100  100  100       1111
+# ROR
+    0100000111100010       1          0111     010  010  100       1110
+# TST
+    0100001000001001       1          1000     001  001  001       1110
+# RSB
+    0100001001100010       1          1001     010  010  100       1111
+# CMP
+    0100001010010001       1          1010     001  001  010       1111
+# CMN
+    0100001011011010       1          1011     010  010  011       1111
+# ORR
+    0100001100111111       1          1100     111  111  111       1110
+# MUL
+    0100001101100110       1          1101     110  110  100       1100
+# BIC
+    0100001110001001       1          1110     001  001  001       1110
+# MVN
+    0100001111010101       1          1111     101  101  010       1110
+
+# the test can then be run by hand from the GUI or in a shell: 
+# java -jar .\logisim-evolution.jar -testvector .\circuit_name .\test_vector_name.txt .\file_name.circ
