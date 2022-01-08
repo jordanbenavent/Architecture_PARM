@@ -217,7 +217,7 @@ end TCL_Generic;
       <circ-port height="10" pin="770,760" width="10" x="265" y="55"/>
       <circ-port height="8" pin="200,190" width="8" x="46" y="116"/>
       <circ-port height="8" pin="200,70" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="550,90" width="8" x="56" y="76"/>
+      <circ-port height="8" pin="550,90" width="8" x="46" y="136"/>
       <circ-port height="8" pin="610,100" width="8" x="46" y="76"/>
       <circ-port height="8" pin="820,100" width="8" x="46" y="96"/>
       <rect fill="none" height="130" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
@@ -335,6 +335,10 @@ end TCL_Generic;
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
+    <comp lib="1" loc="(1080,510)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
     <comp lib="1" loc="(1120,480)" name="AND Gate">
       <a name="inputs" val="3"/>
       <a name="size" val="30"/>
@@ -370,11 +374,13 @@ end TCL_Generic;
     </comp>
     <wire from="(1010,580)" to="(1010,610)"/>
     <wire from="(1040,530)" to="(1060,530)"/>
-    <wire from="(1040,570)" to="(1070,570)"/>
+    <wire from="(1040,570)" to="(1080,570)"/>
     <wire from="(1060,490)" to="(1060,530)"/>
-    <wire from="(1060,490)" to="(1090,490)"/>
-    <wire from="(1070,570)" to="(1070,630)"/>
-    <wire from="(1070,630)" to="(1110,630)"/>
+    <wire from="(1060,530)" to="(1060,630)"/>
+    <wire from="(1060,630)" to="(1110,630)"/>
+    <wire from="(1080,490)" to="(1080,510)"/>
+    <wire from="(1080,490)" to="(1090,490)"/>
+    <wire from="(1080,530)" to="(1080,570)"/>
     <wire from="(1120,480)" to="(1190,480)"/>
     <wire from="(1140,640)" to="(1150,640)"/>
     <wire from="(200,190)" to="(230,190)"/>
