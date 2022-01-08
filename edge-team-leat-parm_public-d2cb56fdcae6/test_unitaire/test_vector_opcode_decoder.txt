@@ -5,9 +5,8 @@ Opcode[6] Shift[1] Data_Processing[1] Load_Store[1] SP_Address[1] Conditional[1]
 # and then you can list the test vectors. Values are separated by spaces
 
 # here I recall the list of the inputs and outputs :
-#    inputs		   outputs 
-#    Opcode
-# b5b4b3b2b1b0 	Shift  Data_Processing  Load_Store  SP_Address  Conditional
+# |  inputs   |	                          outputs                            |
+# |  Opcode   |	Shift  Data_Processing  Load_Store  SP_Address  Conditional  |
      000000 	   1          0             0           0            0    
      000001        1          0             0           0            0 
      000010        1          0             0           0            0
