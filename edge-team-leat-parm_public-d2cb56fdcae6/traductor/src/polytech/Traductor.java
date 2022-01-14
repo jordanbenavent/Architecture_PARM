@@ -27,14 +27,12 @@ public class Traductor {
     void read() throws IOException {
         List<String> allLines = Files.readAllLines(path);
         lines = allLines.stream().map(String::trim).filter(l -> l.length() > 0 && l.charAt(0) != '.' && l.charAt(0) != '@' && !l.startsWith("run")).toList();
-        //String source = null;
         HashMap<String, Integer> branch = new HashMap<>();
         int com = 0, c;
         for (String allLine : allLines) {
             if (allLine.length() > 0) {
                 if (allLine.charAt(0) == '.') {
                     branch.put(allLine.substring(0, allLine.length() - 1), com);
-                    //System.out.println(allLine.substring(0, allLine.length() - 1) + " "+com);
                 } else {
                     allLine = allLine.trim();
                     if (allLine.charAt(0) != '.' && allLine.charAt(0) != '@' && !allLine.startsWith("run")) {
@@ -51,33 +49,13 @@ public class Traductor {
                 //System.out.println(name);
                 c = branch.get(name);
                 fonctions.add(line.substring(0, line.indexOf(".") - 1) + "," + (c - com - 3));
-                //System.out.println(name + " " + c + " " + com);
-                /*for (int i = 0; i < allLines.size(); i++) {
-                    if (c == 0) {
-                        if (allLines.get(i).startsWith(name)) {
-                            System.out.println(allLines.get(i + 1));
-                            for (int k = 0; k < lines.size(); k++) {
-                                if (lines.get(k).equals(allLines.get(i + 1).trim())) {
-                                    c = k;
-                                    //System.out.println("c find " + lines.get(k));
-                                    break;
-                                }
-                            }
-                        }
-                    } else {
-                        s = lines.indexOf(line);
-                        System.out.println("c " + c + " s " + s);
-                        fonctions.add(line.substring(0, line.indexOf(".") - 1) + "," + (c - s - 3));
-                        break;
-                    }
-                }*/
             } else {
                 fonctions.add(line);
             }
             com++;
         }
 
-        System.out.println(fonctions.toString());
+        //System.out.println(fonctions.toString());
     }
 
     void keepKnownInstruction() {
@@ -131,7 +109,6 @@ public class Traductor {
     void displayBinFile() {
         for (Instruction instruction : instructions) {
             System.out.print(instruction.convertToHexa() + " ");
-            //System.out.print(instruction.convertToHexa() + " ");
         }
     }
 }
