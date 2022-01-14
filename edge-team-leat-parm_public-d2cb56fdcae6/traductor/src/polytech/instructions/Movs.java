@@ -25,7 +25,6 @@ public class Movs extends Instruction {
             return "00100" + res.get(0) + res.get(1);
         } else {
             return "000000000" + res.get(1) + res.get(0);
-            //return "0100000010" + res.get(1) + res.get(0);
         }
     }
 }

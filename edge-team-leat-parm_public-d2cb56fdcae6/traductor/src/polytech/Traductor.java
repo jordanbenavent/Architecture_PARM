@@ -15,7 +15,6 @@ public class Traductor {
 
     private final Path path;
     private final List<Instruction> instructions;
-    private List<String> lines;
     private final List<String> fonctions;
 
     Traductor(String path) {
@@ -26,7 +25,7 @@ public class Traductor {
 
     void read() throws IOException {
         List<String> allLines = Files.readAllLines(path);
-        lines = allLines.stream().map(String::trim).filter(l -> l.length() > 0 && l.charAt(0) != '.' && l.charAt(0) != '@' && !l.startsWith("run")).toList();
+        List<String> lines = allLines.stream().map(String::trim).filter(l -> l.length() > 0 && l.charAt(0) != '.' && l.charAt(0) != '@' && !l.startsWith("run")).toList();
         HashMap<String, Integer> branch = new HashMap<>();
         int com = 0, c;
         for (String allLine : allLines) {
@@ -43,10 +42,8 @@ public class Traductor {
         }
         com = 0;
         for (String line : lines) {
-            //line = line.trim();
             if (line.startsWith("b")) {
                 String name = line.substring(line.indexOf("."));
-                //System.out.println(name);
                 c = branch.get(name);
                 fonctions.add(line.substring(0, line.indexOf(".") - 1) + "," + (c - com - 3));
             } else {
@@ -54,8 +51,6 @@ public class Traductor {
             }
             com++;
         }
-
-        //System.out.println(fonctions.toString());
     }
 
     void keepKnownInstruction() {

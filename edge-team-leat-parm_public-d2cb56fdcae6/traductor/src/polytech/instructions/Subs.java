@@ -13,10 +13,7 @@ public class Subs extends Instruction {
 
     @Override
     public String convertToHexa() {
-        //String base = "0001101";
         String binary = getRegister();
-        //System.out.println(binary);
-        //System.out.println(BinarytoHexa(binary));
         return BinarytoHexa(binary);
     }
 
