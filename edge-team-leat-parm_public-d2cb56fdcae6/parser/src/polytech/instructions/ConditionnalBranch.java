@@ -8,7 +8,6 @@ import java.util.stream.Stream;
 public class ConditionnalBranch extends Instruction {
     public ConditionnalBranch(String line) {
         super(line);
-        infos = List.of(13);
     }
 
     @Override
@@ -23,7 +22,6 @@ public class ConditionnalBranch extends Instruction {
                 {"lo", "0011"}, {"mi", "0100"}, {"pl", "0101"}, {"vs", "0110"}, {"vc", "0111"},
                 {"hi", "1000"}, {"ls", "1001"}, {"ge", "1010"}, {"lt", "1011"}, {"gt", "1100"},
                 {"le", "1101"}, {"al", "1110"}}).collect(Collectors.toMap(data -> (String) data[0], data -> (String) data[1]));
-        //System.out.println(conditions.get(cond));
         String binary = String.valueOf(conditions.get(cond));
         while (binary.length() < 4) binary = "0" + binary;
         return binary;

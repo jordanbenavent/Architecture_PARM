@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Ldr extends Instruction {
     public Ldr(String line) {
         super(line);
-        infos = Arrays.asList(9);
     }
 
     @Override

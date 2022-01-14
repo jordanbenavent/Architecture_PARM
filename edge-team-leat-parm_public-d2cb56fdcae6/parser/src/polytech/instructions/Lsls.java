@@ -1,18 +1,17 @@
 package polytech.instructions;
 
-import java.util.Arrays;
+import polytech.instructions.Instruction;
+
 import java.util.List;
 
-public class Movs extends Instruction {
-    public Movs(String line) {
+public class Lsls extends Instruction {
+    public Lsls(String line) {
         super(line);
-        infos = Arrays.asList(2);
     }
 
     @Override
     public String convertToHexa() {
-        String binary = getRegister();
-        binary = BinarytoHexa(binary);
+        String binary = BinarytoHexa(getRegister());
         while (binary.length() < 4) binary = "0" + binary;
         return binary;
     }
@@ -21,10 +20,10 @@ public class Movs extends Instruction {
         line = line.substring(5);
         List<String> res = getNumbers(line);
         if (line.contains("#")) {
-            while (res.get(1).length() != 8) res.set(1, "0" + res.get(1));
-            return "00100" + res.get(0) + res.get(1);
+            while (res.get(2).length() < 5) res.set(2, "0" + res.get(2));
+            return "00000" + res.get(2) + res.get(1) + res.get(0);
         } else {
-            return "000000000" + res.get(1) + res.get(0);
+            return "0100000010" + res.get(1) + res.get(0);
         }
     }
 }

@@ -1,11 +1,8 @@
 package polytech.instructions;
 
-import java.util.List;
-
 public class UnconditionnalBranch extends Instruction {
     public UnconditionnalBranch(String line) {
         super(line);
-        infos = List.of(14);
     }
 
     @Override

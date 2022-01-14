@@ -2,8 +2,8 @@ package polytech.instructions;
 
 import java.util.List;
 
-public class Lsls extends Instruction {
-    public Lsls(String line) {
+public class Lsrs extends Instruction {
+    public Lsrs(String line) {
         super(line);
     }
 
@@ -19,9 +19,9 @@ public class Lsls extends Instruction {
         List<String> res = getNumbers(line);
         if (line.contains("#")) {
             while (res.get(2).length() < 5) res.set(2, "0" + res.get(2));
-            return "00000" + res.get(2) + res.get(1) + res.get(0);
+            return "00001" + res.get(2) + res.get(1) + res.get(0);
         } else {
-            return "0100000010" + res.get(1) + res.get(0);
+            return "0100000011" + res.get(1) + res.get(0);
         }
     }
 }

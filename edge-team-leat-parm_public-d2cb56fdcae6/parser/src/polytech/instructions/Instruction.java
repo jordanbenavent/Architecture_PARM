@@ -6,9 +6,8 @@ import java.util.List;
 
 public abstract class Instruction {
     protected String line;
-    protected List<Integer> infos;
 
-    Instruction(String line){
+    protected Instruction(String line){
         this.line = line;
     }
 

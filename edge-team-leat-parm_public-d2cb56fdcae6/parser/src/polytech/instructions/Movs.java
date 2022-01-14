@@ -2,15 +2,15 @@ package polytech.instructions;
 
 import java.util.List;
 
-public class Lsrs extends Instruction {
-    public Lsrs(String line) {
+public class Movs extends Instruction {
+    public Movs(String line) {
         super(line);
-        infos = List.of(1);
     }
 
     @Override
     public String convertToHexa() {
-        String binary = BinarytoHexa(getRegister());
+        String binary = getRegister();
+        binary = BinarytoHexa(binary);
         while (binary.length() < 4) binary = "0" + binary;
         return binary;
     }
@@ -19,10 +19,10 @@ public class Lsrs extends Instruction {
         line = line.substring(5);
         List<String> res = getNumbers(line);
         if (line.contains("#")) {
-            while (res.get(2).length() < 5) res.set(2, "0" + res.get(2));
-            return "00001" + res.get(2) + res.get(1) + res.get(0);
+            while (res.get(1).length() != 8) res.set(1, "0" + res.get(1));
+            return "00100" + res.get(0) + res.get(1);
         } else {
-            return "0100000011" + res.get(1) + res.get(0);
+            return "0000000000" + res.get(1) + res.get(0);
         }
     }
 }

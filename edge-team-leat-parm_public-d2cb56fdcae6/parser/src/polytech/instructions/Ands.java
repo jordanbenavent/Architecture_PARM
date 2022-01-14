@@ -2,8 +2,8 @@ package polytech.instructions;
 
 import java.util.List;
 
-public class Eors extends Instruction {
-    public Eors(String line) {
+public class Ands extends Instruction {
+    public Ands(String line) {
         super(line);
     }
 
@@ -12,9 +12,9 @@ public class Eors extends Instruction {
         return BinarytoHexa(getRegister());
     }
 
-    private String getRegister() {
+    protected String getRegister() {
         line = line.substring(5);
         List<String> res = getNumbers(line);
-        return "0100000001" + res.get(1) + res.get(0);
+        return "0100000000" + res.get(1) + res.get(0);
     }
 }
