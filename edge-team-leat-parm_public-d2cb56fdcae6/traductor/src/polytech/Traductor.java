@@ -76,8 +76,6 @@ public class Traductor {
             }
             com++;
         }
-
-        System.out.println(fonctions.toString());
     }
 
     void keepKnownInstruction() {
@@ -131,7 +129,6 @@ public class Traductor {
     void displayBinFile() {
         for (Instruction instruction : instructions) {
             System.out.print(instruction.convertToHexa() + " ");
-            //System.out.print(instruction.convertToHexa() + " ");
         }
     }
 }

@@ -10,8 +10,8 @@ public class Main {
         Traductor traductor = new Traductor(path);
         traductor.read();
         traductor.keepKnownInstruction();
-        traductor.displaySfile();
-        System.out.println();
+        //traductor.displaySfile();
+        //System.out.println();
         traductor.displayBinFile();
     }
 }
