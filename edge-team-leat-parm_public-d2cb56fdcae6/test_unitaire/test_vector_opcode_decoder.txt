@@ -1,4 +1,4 @@
-# Unitary testing: test vectors for opcode decoder
+	# Unitary testing: test vectors for opcode decoder
 
 Opcode[6] Shift[1] Data_Processing[1] Load_Store[1] SP_Address[1] Conditional[1]
 
@@ -77,10 +77,10 @@ Opcode[6] Shift[1] Data_Processing[1] Load_Store[1] SP_Address[1] Conditional[1]
      110110        0          0             0           0            1
      110111        0          0             0           0            1
 
-     111000        0          0             0           0            0
-     111001        0          0             0           0            0
-     111010        0          0             0           0            0
-     111011        0          0             0           0            0
+     111000        0          0             0           0            1
+     111001        0          0             0           0            1
+     111010        0          0             0           0            1
+     111011        0          0             0           0            1
 
      111100        0          0             0           0            0
      111101        0          0             0           0            0
